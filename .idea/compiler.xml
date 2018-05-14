@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="battleships" />
+        <module name="MVC_AngularJS_Html5 project" />
+        <module name="MVC_Html5_AngularJS project" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="battleships" target="1.8" />
+      <module name="MVC_AngularJS_Html5 project" target="1.5" />
+      <module name="MVC_Html5_AngularJS project" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

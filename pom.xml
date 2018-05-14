@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.practice</groupId>
-    <artifactId>battleships</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>batleships</artifactId>
+    <version>1.0</version>
 
     <properties>
 
@@ -70,6 +70,7 @@
     <!--http://startbootstrap.com/template-overviews/modern-business/  this is theme-->
 
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -85,4 +86,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
