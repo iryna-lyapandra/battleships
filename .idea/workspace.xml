@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f29d4394-2738-4a15-8908-df057e03123c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/board.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mvc_angular_html5.iws" />
@@ -75,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/battleshipsJava/mvc/Servlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -197,11 +196,6 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="X:/tools/apache-maven-3.5.3" />
-      </MavenGeneralSettings>
-    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -1154,7 +1148,7 @@
       <workItem from="1526494138644" duration="5751000" />
       <workItem from="1526502184415" duration="6050000" />
       <workItem from="1526810492376" duration="5247000" />
-      <workItem from="1527256782871" duration="10076000" />
+      <workItem from="1527256782871" duration="10134000" />
     </task>
     <task id="LOCAL-00001" summary="run 1">
       <created>1526300934993</created>
@@ -1170,11 +1164,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527353331301</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="run 1">
+      <created>1527353940975</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527353940975</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53951000" />
+    <option name="totallyTimeSpent" value="54009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1664,7 +1665,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/battleshipsJava/mvc/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
         </state>
       </provider>
