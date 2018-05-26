@@ -25,7 +25,7 @@
 
 
     <mvc:view-controller path="/about.html" view-name="/about/about"/>
-    <mvc:view-controller path="/index.html" view-name="/index"/>
+    <mvc:view-controller path="/index.html" view-name="/index0"/>
 
 
 </beans>

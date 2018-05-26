@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
+<!doctype html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Battleship</title>
@@ -16,7 +12,7 @@ div#board {
 	width: 1024px;
 	height: 863px;
 	margin: auto;
-	background: url("${pageContext.request.contextPath}/resources/images/board.jpg") no-repeat;
+	background: url("../WEB-INF/view/board.jpg") no-repeat;
 }
 
 div#messageArea {
@@ -26,10 +22,10 @@ div#messageArea {
 	color: rgb(83, 175, 19);
 }
 .hit {
-	background: url("${pageContext.request.contextPath}/resources/images/ship.png") no-repeat center center;
+	background: url("../resources/images/ship.png") no-repeat center center;
 }
 .miss {
-	background: url("${pageContext.request.contextPath}/resources/images/miss.png") no-repeat center center;
+	background: url("../resources/images/miss.png") no-repeat center center;
 }
 table {
 	border-spacing: 0px; 
@@ -44,7 +40,7 @@ td {
 	height: 94px;
 }
 form {
-	position: relative;
+	position: absolute;
 	bottom: 0px;
 	right: 0px;
 	padding: 15px;
@@ -58,10 +54,6 @@ form input {
 </style>
 </head>
 <body>
-<form>
-    <input type="text" id="guessInput" placeholder="A0">
-    <input type="button" id="fireButton" value="Fire!">
-</form>
 <div id="board">
 <div id="messageArea"></div>
 <table>
@@ -94,8 +86,12 @@ form input {
 <td id="64"></td> <td id="65"></td> <td id="66"></td>
 </tr>
 </table>
+<form>
+<input type="text" id="guessInput" placeholder="A0">
+<input type="button" id="fireButton" value="Fire!">
+</form>
 </div>
-<script src="${pageContext.request.contextPath}/resources/js/battleship.js">
+<script src="../resources/js/battleship.js">
 </script>
 </body>
 </html>
