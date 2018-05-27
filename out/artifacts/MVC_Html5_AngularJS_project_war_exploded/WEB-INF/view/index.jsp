@@ -13,8 +13,8 @@ body {
 }
 div#board {
 	position: relative;
-	width: 1024px;
-	height: 863px;
+    width: 1024px;
+    height: 863px;
 	margin: auto;
 	background: url("${pageContext.request.contextPath}/resources/images/board.jpg") no-repeat;
 }
@@ -23,7 +23,9 @@ div#messageArea {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	color: rgb(83, 175, 19);
+	color: white;
+	/*color: rgb(83, 175, 19);*/
+    font-size: 3em;
 }
 .hit {
 	background: url("${pageContext.request.contextPath}/resources/images/ship.png") no-repeat center center;

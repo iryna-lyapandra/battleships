@@ -3,6 +3,7 @@ var model = {
     numShips: 3,
     shipLength: 3,
     shipsSunk: 0,
+    guesses: 0,
 
     ships: [
         {locations: [0, 0, 0], hits: ["", "", ""]},
@@ -31,6 +32,7 @@ var model = {
                     var result = xmlhttp.responseText;
                     var parsedGuess = parseGuess(guess);
 
+                    model.guesses++;
                     if (result == "hit") {
                         view.displayHit(parsedGuess);
                         view.displayMessage("HIT!");
@@ -40,8 +42,13 @@ var model = {
                         view.displayMessage("You missed.");
                     }
                     else {
+                        model.shipsSunk++;
                         view.displayHit(parsedGuess);
                         view.displayMessage("Kill!");
+
+                        if (model.shipsSunk == model.numShips){
+                            view.displayMessage("You sank all my battleships, == in " + model.guesses + " guesses");
+                        }
                     }
                 }
 
