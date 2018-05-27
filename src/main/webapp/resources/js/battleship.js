@@ -45,40 +45,69 @@ var model = {
 	    return true;
 	},
 
-	generateShipLocations: function() {
-		var locations;
-		for (var i = 0; i < this.numShips; i++) {
-			do {
-				locations = this.generateShip();
-			} while (this.collision(locations));
-			this.ships[i].locations = locations;
-		}
-		console.log("Ships array: ");
-		console.log(this.ships);
+    generateShipLocations: function() {
+        //Creating a new XMLHttpRequest object
+        var xmlhttp;
+        if (window.XMLHttpRequest){
+            xmlhttp = new XMLHttpRequest(); //for IE7+, Firefox, Chrome, Opera, Safari
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); //for IE6, IE5
+        }
+        //Create a asynchronous GET request
+        xmlhttp.open("GET", "init", true);
+
+        //When readyState is 4 then get the server output
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4) {
+                if (xmlhttp.status == 200)
+                {
+                    view.displayMessage (xmlhttp.responseText);
+                    //alert(xmlhttp.responseText);
+                }
+                else
+                {
+                    alert('Something is wrong !!');
+                }
+            }
+        };
+
+        xmlhttp.send(null);
+
 	},
-
-	generateShip: function() {
-		var direction = Math.floor(Math.random() * 2);
-		var row, col;
-
-		if (direction === 1) { // horizontal
-			row = Math.floor(Math.random() * this.boardSize);
-			col = Math.floor(Math.random() * (this.boardSize - this.shipLength + 1));
-		} else { // vertical
-			row = Math.floor(Math.random() * (this.boardSize - this.shipLength + 1));
-			col = Math.floor(Math.random() * this.boardSize);
-		}
-
-		var newShipLocations = [];
-		for (var i = 0; i < this.shipLength; i++) {
-			if (direction === 1) {
-				newShipLocations.push(row + "" + (col + i));
-			} else {
-				newShipLocations.push((row + i) + "" + col);
-			}
-		}
-		return newShipLocations;
-	},
+	// generateShipLocations: function() {
+	// 	var locations;
+	// 	for (var i = 0; i < this.numShips; i++) {
+	// 		do {
+	// 			locations = this.generateShip();
+	// 		} while (this.collision(locations));
+	// 		this.ships[i].locations = locations;
+	// 	}
+	// 	console.log("Ships array: ");
+	// 	console.log(this.ships);
+	// },
+    //
+	// generateShip: function() {
+	// 	var direction = Math.floor(Math.random() * 2);
+	// 	var row, col;
+    //
+	// 	if (direction === 1) { // horizontal
+	// 		row = Math.floor(Math.random() * this.boardSize);
+	// 		col = Math.floor(Math.random() * (this.boardSize - this.shipLength + 1));
+	// 	} else { // vertical
+	// 		row = Math.floor(Math.random() * (this.boardSize - this.shipLength + 1));
+	// 		col = Math.floor(Math.random() * this.boardSize);
+	// 	}
+    //
+	// 	var newShipLocations = [];
+	// 	for (var i = 0; i < this.shipLength; i++) {
+	// 		if (direction === 1) {
+	// 			newShipLocations.push(row + "" + (col + i));
+	// 		} else {
+	// 			newShipLocations.push((row + i) + "" + col);
+	// 		}
+	// 	}
+	// 	return newShipLocations;
+	// },
 
 	collision: function(locations) {
 		for (var i = 0; i < this.numShips; i++) {

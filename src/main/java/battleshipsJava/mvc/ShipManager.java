@@ -4,10 +4,10 @@ import java.util.*;
 
 public class ShipManager {
     private GameHelper helper = new GameHelper();
-    private List<Ship> shipsArrayList = new ArrayList<>();
+    private static List<Ship> shipsArrayList = new ArrayList<>();
     private int numOfGuesses = 0;
 
-    private void setUpGame() {
+    public void setUpGame() {
         Ship one = new Ship();
         one.setName("Bentinck");
         Ship two = new Ship();
@@ -62,5 +62,9 @@ public class ShipManager {
         ShipManager game = new ShipManager();
         game.setUpGame();
         game.startPlaying();
+    }
+
+    public List<Ship> getShipsArrayList() {
+        return shipsArrayList;
     }
 }
