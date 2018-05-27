@@ -54,18 +54,18 @@ var model = {
             if (xmlhttp.readyState == 4) {
                 if (xmlhttp.status == 200) {
                     var result = xmlhttp.responseText;
-                    alert(result);
+                    var parsedGuess = parseGuess(guess);
+
                     if (result == "hit") {
-                        view.displayHit(guess);
+                        view.displayHit(parsedGuess);
                         view.displayMessage("HIT!");
                     }
-
                     else if (result == "miss") {
-                        view.displayMiss(result === guess);
+                        view.displayMiss(parsedGuess);
                         view.displayMessage("You missed.");
                     }
                     else {
-                        view.displayHit(guess);
+                        view.displayHit(parsedGuess);
                         view.displayMessage("Kill!");
                     }
                 }
@@ -82,14 +82,14 @@ var model = {
 
     },
 
-    isSunk: function (ship) {
-        for (var i = 0; i < this.shipLength; i++) {
-            if (ship.hits[i] !== "hit") {
-                return false;
-            }
-        }
-        return true;
-    },
+    // isSunk: function (ship) {
+    //     for (var i = 0; i < this.shipLength; i++) {
+    //         if (ship.hits[i] !== "hit") {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // },
 
     generateShipLocations: function () {
         //Creating a new XMLHttpRequest object
