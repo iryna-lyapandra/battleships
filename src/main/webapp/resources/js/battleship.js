@@ -49,12 +49,8 @@ var model = {
                     alert('Something is wrong !!');
                 }
             }
-
         }
-
-
         xmlhttp.send(null);
-
     },
 
     generateShipLocations: function () {
@@ -80,9 +76,7 @@ var model = {
                 }
             }
         };
-
         xmlhttp.send(null);
-
     },
 };
 

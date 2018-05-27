@@ -13,8 +13,8 @@ body {
 }
 div#board {
 	position: relative;
-	width: 1024px;
-	height: 863px;
+    width: 1024px;
+    height: 863px;
 	margin: auto;
 	background: url("${pageContext.request.contextPath}/resources/images/board.jpg") no-repeat;
 }
