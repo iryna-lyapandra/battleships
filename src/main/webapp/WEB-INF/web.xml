@@ -53,4 +53,15 @@
         <servlet-name>InitServlet</servlet-name>
         <url-pattern>/init</url-pattern>
     </servlet-mapping>
-</web-app>
+
+    <servlet>
+        <servlet-name>CheckServlet</servlet-name>
+        <servlet-class>battleshipsJava.mvc.CheckServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CheckServlet</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
+
+    </web-app>

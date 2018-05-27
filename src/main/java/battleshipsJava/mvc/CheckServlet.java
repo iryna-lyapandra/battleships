@@ -11,19 +11,17 @@ import java.io.PrintWriter;
 /**
  * Created by a on 5/27/2018.
  */
-@WebServlet(name = "InitServlet")
-public class InitServlet extends HttpServlet {
+@WebServlet(name = "CheckServlet")
+public class CheckServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setHeader("Cache-Control", "no-cache");
-        response.setHeader("Pragma", "no-cache");
-        ShipManager game = new ShipManager();
-        game.setUpGame();
+        String guess = request.getParameter("guess");
+        ShipManager checker = new ShipManager();
+        String result = checker.checkUserGuess(guess);
         PrintWriter out = response.getWriter();
-        out.print(game.getShipsArrayList());
-
+        out.print(result);
     }
 }

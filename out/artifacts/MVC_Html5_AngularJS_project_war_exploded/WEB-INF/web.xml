@@ -43,5 +43,25 @@
         <error-code>404</error-code>
         <location>/WEB-INF/view/error/errorpage.jsp</location>
     </error-page>
-    
-</web-app>
+
+    <servlet>
+        <servlet-name>InitServlet</servlet-name>
+        <servlet-class>battleshipsJava.mvc.InitServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InitServlet</servlet-name>
+        <url-pattern>/init</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckServlet</servlet-name>
+        <servlet-class>battleshipsJava.mvc.CheckServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CheckServlet</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
+
+    </web-app>

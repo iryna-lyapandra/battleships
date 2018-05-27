@@ -36,12 +36,13 @@ public class ShipManager {
         finishGame();
     }
 
-    private void checkUserGuess(String userGuess) {
+    public String checkUserGuess(String userGuess) {
         numOfGuesses++;
+        String guessLowerCase = userGuess.toLowerCase();
         String result = "miss";
 
         for (Ship shipToTest : shipsArrayList) {
-            result = shipToTest.checkYourself(userGuess);
+            result = shipToTest.checkYourself(guessLowerCase);
             if (result.equals("hit")) {
                 break;
             }
@@ -50,7 +51,7 @@ public class ShipManager {
                 break;
             }
         }
-        System.out.println(result);
+        return result;
     }
 
     private void finishGame() {
