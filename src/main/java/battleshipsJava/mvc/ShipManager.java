@@ -23,7 +23,7 @@ public class ShipManager {
         System.out.println("Try to sink them all in the fewest number of guesses");
 
         for (Ship shipSet : shipsArrayList) {
-            List <String> newLocation = helper.placeShips(3);
+            List<String> newLocation = helper.placeShips(3);
             shipSet.setLocationCells(newLocation);
         }
     }
