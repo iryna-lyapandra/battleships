@@ -29,13 +29,14 @@
                     if (xmlhttp.status == 200)
                     {
                         var result = xmlhttp.responseText;
-//                        if (result == "true") {
-//                            window.location='about.html'
-//                        }
-//                        else {
-//                            alert("Enter the right username&password")
-//                        }
-                        alert(result);
+//                        alert(result);
+                        if (result == "true") {
+                            window.location='about.html'
+                        }
+                        else {
+                            alert("Enter the right username&password")
+                        }
+
 
 //                        document.getElementById("message").innerHTML = xmlhttp.responseText;
                         //alert(xmlhttp.responseText);

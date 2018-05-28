@@ -21,12 +21,24 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        Properties prop = PropertyReader.readGameProperties();
-        String allowedLoginName = prop.getProperty("login");
-        String allowedPassword = prop.getProperty("password");
+
+        String hardCodedLoginName = "abc";
+        String hardCodedPassword = "123";
 
         PrintWriter out = response.getWriter();
-        out.print(allowedLoginName + " " + allowedPassword);
+        if (username.equals(hardCodedLoginName) && password.equals(hardCodedPassword)) {
+            out.print("true");
+        }
+        else {
+            out.print("false");
+        }
+
+//        Properties prop = PropertyReader.readGameProperties();
+//        String allowedLoginName = prop.getProperty("login");
+//        String allowedPassword = prop.getProperty("password");
+//        String result = allowedLoginName+ " " + allowedPassword;
+//        PrintWriter out = response.getWriter();
+//        out.print(result);
 
 //        if (username.equals(allowedLoginName) && password.equals(allowedPassword)) {
 //            out.print("true");
