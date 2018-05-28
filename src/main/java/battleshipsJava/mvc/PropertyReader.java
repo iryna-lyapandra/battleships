@@ -8,7 +8,7 @@ public class PropertyReader {
     public static Properties readGameProperties(){
         Properties properties = new Properties();
         try {
-            properties.load(new FileInputStream("src/main/resources/config.properties"));
+            properties.load(new FileInputStream("src/main/resources/properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }

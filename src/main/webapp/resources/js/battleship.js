@@ -13,7 +13,7 @@ var model = {
 
     fire: function (guess) {
         //Creating a new XMLHttpRequest object
-        window.location='about.html'
+
         var xmlhttp;
         var url = "check?guess=" + guess;
 
